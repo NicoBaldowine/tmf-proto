@@ -30,28 +30,33 @@ export function MoneyballTable() {
 
   return (
     <div className="space-y-1 p-0">
-      <div className="flex justify-end items-center gap-3 pt-3 pb-3 pr-4">
-        <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
-          <PlusCircle className="h-4 w-4" />
-          Add Column
-        </Button>
-        
-        <Select defaultValue="2025-q1">
-          <SelectTrigger className="w-[130px] h-8 text-sm border-gray-200 shadow-none" size="sm">
-            <SelectValue placeholder="Select Quarter">2025 Q1</SelectValue>
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="2025-q1">2025 Q1</SelectItem>
-            <SelectItem value="2024-q4">2024 Q4</SelectItem>
-            <SelectItem value="2024-q3">2024 Q3</SelectItem>
-            <SelectItem value="2024-q2">2024 Q2</SelectItem>
-          </SelectContent>
-        </Select>
-        
-        <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none mr-1">
-          <Filter className="h-4 w-4" />
-          Filters
-        </Button>
+      <div className="flex justify-between items-center pt-3 pb-3 pr-4 pl-4">
+        <div className="text-sm text-gray-500 font-medium">
+          Results: 3625 of 3625
+        </div>
+        <div className="flex items-center gap-3">
+          <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
+            <PlusCircle className="h-4 w-4" />
+            Add Column
+          </Button>
+          
+          <Select defaultValue="2025-q1">
+            <SelectTrigger className="w-[130px] h-8 text-sm border-gray-200 shadow-none" size="sm">
+              <SelectValue placeholder="Select Quarter">2025 Q1</SelectValue>
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="2025-q1">2025 Q1</SelectItem>
+              <SelectItem value="2024-q4">2024 Q4</SelectItem>
+              <SelectItem value="2024-q3">2024 Q3</SelectItem>
+              <SelectItem value="2024-q2">2024 Q2</SelectItem>
+            </SelectContent>
+          </Select>
+          
+          <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none mr-1">
+            <Filter className="h-4 w-4" />
+            Filters
+          </Button>
+        </div>
       </div>
 
       <div className="text-sm text-gray-500 overflow-x-auto">
