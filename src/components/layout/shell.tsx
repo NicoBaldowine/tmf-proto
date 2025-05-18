@@ -14,7 +14,7 @@ export function Shell({ children }: ShellProps) {
       <div className="flex-1 flex flex-col overflow-hidden">
         <Topbar />
         <main className="flex-1 overflow-auto bg-gray-50 p-0">
-          <div className="p-6">
+          <div className="p-3">
             {children}
           </div>
         </main>

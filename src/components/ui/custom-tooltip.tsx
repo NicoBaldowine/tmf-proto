@@ -10,7 +10,7 @@ import {
 import { cn } from "@/lib/utils"
 
 const tooltipVariants = cva(
-  "z-50 text-balance max-w-xs bg-gray-900 text-white shadow-md border border-gray-800",
+  "z-50 text-balance max-w-[280px] bg-gray-900 text-white shadow-md border border-gray-800 px-1.5 py-1",
   {
     variants: {
       variant: {

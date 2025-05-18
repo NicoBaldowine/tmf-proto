@@ -11,7 +11,7 @@ interface CommentsProps {
 
 export function Comments({ count, hasNew = false, hasReplies = false }: CommentsProps) {
   // Determinar el color del icono
-  const iconColor = count > 0 ? "text-blue-500" : "text-gray-400";
+  const iconColor = (hasNew || hasReplies) ? "text-blue-500" : "text-gray-400";
   
   // Determinar el color del badge
   let badgeColor = "bg-gray-100 text-gray-700";

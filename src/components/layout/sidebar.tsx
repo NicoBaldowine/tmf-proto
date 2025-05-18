@@ -9,6 +9,17 @@ import {
   Database,
   ChevronLeft,
   ChevronRight,
+  Sparkles,
+  BarChartBig,
+  Newspaper,
+  Briefcase,
+  Wrench,
+  Puzzle,
+  FileText,
+  MessageSquare,
+  Tv2,
+  HelpCircle,
+  AccessibilityIcon as Accessibility,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,15 +29,26 @@ export function Sidebar() {
 
   const navItems = [
     { name: "Home", href: "/home", icon: Home },
+    { name: "New recs", href: "/new-recs", icon: Sparkles },
+    { name: "Rankings", href: "/rankings", icon: BarChartBig },
     { name: "My Stocks", href: "/mystocks", icon: LineChart },
+    { name: "Coverage", href: "/coverage", icon: Newspaper },
+    { name: "My Services", href: "/my-services", icon: Briefcase },
     { name: "Databases", href: "/databases/moneyball", icon: Database },
+    { name: "Toolkit", href: "/toolkit", icon: Wrench },
+    { name: "GamePlan+", href: "/gameplan-plus", icon: Puzzle },
+    { name: "My Reports", href: "/my-reports", icon: FileText },
+    { name: "Discuss", href: "/discuss", icon: MessageSquare },
+    { name: "Fool24", href: "/fool24", icon: Tv2 },
+    { name: "Help", href: "/help", icon: HelpCircle },
+    { name: "Accessibility", href: "/accessibility", icon: Accessibility },
   ];
 
   return (
     <div
       className={cn(
         "h-screen bg-blue-950 text-white flex flex-col transition-all duration-300 ease-in-out",
-        isCollapsed ? "w-16" : "w-64"
+        isCollapsed ? "w-16" : "w-48"
       )}
     >
       {/* Top section */}
