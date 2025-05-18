@@ -31,14 +31,14 @@ export function MoneyballTable() {
   return (
     <div className="space-y-1 p-0">
       <div className="flex justify-end items-center gap-2 pt-3 pb-3">
-        <Button variant="outline" size="sm" className="flex items-center gap-1">
+        <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
           <PlusCircle className="h-4 w-4" />
           Add Column
         </Button>
         
         <Select defaultValue="2025-q1">
-          <SelectTrigger className="w-[130px]">
-            <SelectValue placeholder="Select Quarter" />
+          <SelectTrigger className="w-[130px] h-8 text-sm border-gray-200 shadow-none" size="sm">
+            <SelectValue placeholder="Select Quarter">2025 Q1</SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="2025-q1">2025 Q1</SelectItem>
@@ -48,7 +48,7 @@ export function MoneyballTable() {
           </SelectContent>
         </Select>
         
-        <Button variant="outline" size="sm" className="flex items-center gap-1">
+        <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
           <Filter className="h-4 w-4" />
           Filters
         </Button>
