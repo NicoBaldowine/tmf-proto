@@ -80,7 +80,7 @@ export function MoneyballTable() {
                 <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Podcast</span>
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
-              <TableHead className="w-[90px] text-center cursor-help group relative">
+              <TableHead className="w-[90px] text-left cursor-help group relative">
                 <CustomTooltip 
                   variant="discovery" 
                   autoShow={true}
@@ -192,8 +192,8 @@ export function MoneyballTable() {
                     <Play className="h-3.5 w-3.5 text-blue-500" />
                   </div>
                 </TableCell>
-                <TableCell className="w-[90px] text-center">
-                  <div className="flex justify-center">
+                <TableCell className="w-[90px] text-left">
+                  <div className="flex justify-start">
                     <CustomTooltip 
                       variant="info" 
                       content={
