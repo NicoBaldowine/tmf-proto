@@ -26,6 +26,7 @@ export type Stock = {
   divYield: string;
   gapta: string;
   isFollowing: boolean;
+  logoUrl?: string;
 };
 
 export const moneyballStocksMock: Stock[] = [
@@ -56,7 +57,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "0.0%",
     gapta: "4.7%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/apple.com"
   },
   {
     id: "2",
@@ -85,7 +87,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "1.3%",
     gapta: "0.0%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/microsoft.com"
   },
   {
     id: "3",
@@ -114,7 +117,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "0.7%",
     gapta: "23.3%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/google.com"
   },
   {
     id: "4",
@@ -143,7 +147,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "0.3%",
     gapta: "7.5%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/amazon.com"
   },
   {
     id: "5",
@@ -172,7 +177,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "0.5%",
     gapta: "7.1%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/tesla.com"
   },
   {
     id: "6",
@@ -201,7 +207,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "0.5%",
     gapta: "0.0%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/nvidia.com"
   },
   {
     id: "7",
@@ -230,7 +237,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "0.9%",
     gapta: "9.4%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/meta.com"
   },
   {
     id: "8",
@@ -259,7 +267,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "-",
     gapta: "3.7%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/netflix.com"
   },
   {
     id: "9",
@@ -288,7 +297,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "6.8%",
     gapta: "9.6%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/intel.com"
   },
   {
     id: "10",
@@ -317,7 +327,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "9.8%",
     gapta: "5.0%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/adobe.com"
   },
   {
     id: "11",
@@ -346,7 +357,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "9.0%",
     gapta: "7.0%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/oracle.com"
   },
   {
     id: "12",
@@ -375,7 +387,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "5.4%",
     gapta: "1.9%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/paypal.com"
   },
   {
     id: "13",
@@ -404,7 +417,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "1.7%",
     gapta: "11.1%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/salesforce.com"
   },
   {
     id: "14",
@@ -433,7 +447,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "3.9%",
     gapta: "2.2%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/uber.com"
   },
   {
     id: "15",
@@ -462,7 +477,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "5.6%",
     gapta: "6.0%",
-    isFollowing: true
+    isFollowing: true,
+    logoUrl: "https://logo.clearbit.com/airbnb.com"
   },
   {
     id: "16",
@@ -491,7 +507,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "2.4%",
     gapta: "1.5%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/alibaba.com"
   },
   {
     id: "17",
@@ -520,7 +537,8 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Moderate",
     divYield: "0.9%",
     gapta: "4.4%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/shopify.com"
   },
   {
     id: "18",
@@ -549,6 +567,7 @@ export const moneyballStocksMock: Stock[] = [
     investingType: "Cautious",
     divYield: "2.9%",
     gapta: "3.2%",
-    isFollowing: false
+    isFollowing: false,
+    logoUrl: "https://logo.clearbit.com/amd.com"
   }
 ]; 

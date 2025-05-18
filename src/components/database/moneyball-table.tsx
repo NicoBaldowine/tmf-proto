@@ -182,7 +182,18 @@ export function MoneyballTable() {
                   <Checkbox />
                 </TableCell>
                 <TableCell className="w-[90px] font-medium text-gray-600">
-                  {stock.symbol}
+                  <div className="flex items-center gap-2">
+                    <img 
+                      src={stock.logoUrl} 
+                      alt={stock.symbol} 
+                      className="w-5 h-5 rounded-full object-cover border border-gray-200" 
+                      onError={(e) => {
+                        // Fallback si la imagen no carga
+                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${stock.symbol}&background=random&size=64&bold=true`;
+                      }}
+                    />
+                    {stock.symbol}
+                  </div>
                 </TableCell>
                 <TableCell className="w-[180px] text-left">
                   {stock.name}
