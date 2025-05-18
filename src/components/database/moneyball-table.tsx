@@ -68,7 +68,7 @@ export function MoneyballTable() {
                 <Pin className="h-3.5 w-3.5" />
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
-              <TableHead className="w-[90px] cursor-help group relative">
+              <TableHead className="w-[120px] cursor-help group relative">
                 <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Symbol</span>
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
@@ -181,12 +181,12 @@ export function MoneyballTable() {
                 <TableCell className="w-10 text-center">
                   <Checkbox />
                 </TableCell>
-                <TableCell className="w-[90px] font-medium text-gray-600">
-                  <div className="flex items-center gap-2">
+                <TableCell className="w-[120px] font-medium text-gray-600">
+                  <div className="flex items-center gap-2.5">
                     <img 
                       src={stock.logoUrl} 
                       alt={stock.symbol} 
-                      className="w-5 h-5 rounded-full object-cover border border-gray-200" 
+                      className="w-6 h-6 rounded-full object-cover border border-gray-200" 
                       onError={(e) => {
                         // Fallback si la imagen no carga
                         (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${stock.symbol}&background=random&size=64&bold=true`;
