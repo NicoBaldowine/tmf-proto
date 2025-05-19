@@ -60,10 +60,12 @@ export function Topbar() {
           {!showMobileSearch && renderLeftContent()}
         </div>
         <div className="flex items-center">
-          <SearchBar 
-            className="w-80 hidden xl:flex"
-            placeholder="Search for stocks or articles..."
-          />
+          {pathname !== "/databases/moneyball" && (
+            <SearchBar 
+              className="w-80 hidden xl:flex"
+              placeholder="Search for stocks or articles..."
+            />
+          )}
           <button
             onClick={() => setShowMobileSearch(true)}
             className="p-2 rounded-md hover:bg-gray-100 xl:hidden"

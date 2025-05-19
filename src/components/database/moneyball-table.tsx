@@ -18,10 +18,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { PlusCircle, Filter, Play, Pin, Plus, Check } from "lucide-react";
+import { PlusCircle, Pin, Plus, Check, SlidersHorizontal } from "lucide-react";
 import { moneyballStocksMock } from "./mocks/moneyball";
 import { Comments } from "./comments";
 import { CustomTooltip } from "@/components/ui/custom-tooltip";
+import { MoneyballSearchBar } from "./moneyball-searchbar";
+import { Podcast } from "./podcast";
 
 export function MoneyballTable() {
   const formatPercent = (num: number) => {
@@ -35,6 +37,7 @@ export function MoneyballTable() {
           Results: 3625 of 3625
         </div>
         <div className="flex items-center gap-3">
+          <MoneyballSearchBar className="w-80" />
           <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
             <PlusCircle className="h-4 w-4" />
             Add Column
@@ -53,8 +56,8 @@ export function MoneyballTable() {
           </Select>
           
           <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none mr-1">
-            <Filter className="h-4 w-4" />
-            Filters
+            <SlidersHorizontal className="h-4 w-4" />
+            Customize
           </Button>
         </div>
       </div>
@@ -292,7 +295,13 @@ export function MoneyballTable() {
                 </TableCell>
                 <TableCell className="w-[60px] text-center">
                   <div className="flex justify-center">
-                    <Play className="h-3.5 w-3.5 text-blue-500" />
+                    {stock.id === "1" ? (
+                      <Podcast listened />
+                    ) : stock.id === "2" ? (
+                      <Podcast isNew />
+                    ) : (
+                      <Podcast />
+                    )}
                   </div>
                 </TableCell>
                 <TableCell className="w-[90px] text-left">
