@@ -5,11 +5,12 @@ import React from "react";
 
 interface PodcastProps {
   listened?: boolean;
+  isNew?: boolean;
 }
 
-export function Podcast({ listened = false }: PodcastProps) {
-  // Determinar el color del icono
-  const iconColor = listened ? "text-gray-400" : "text-blue-500";
+export function Podcast({ listened = false, isNew = false }: PodcastProps) {
+  // Determine icon color based on props
+  const iconColor = listened ? "text-gray-400" : isNew ? "text-blue-500" : "text-gray-500";
 
   return (
     <div className="flex items-center group cursor-pointer transition-opacity hover:opacity-80 relative">
