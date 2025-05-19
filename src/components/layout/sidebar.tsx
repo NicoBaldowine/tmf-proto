@@ -52,18 +52,23 @@ export function Sidebar() {
       )}
     >
       {/* Top section */}
-      <div className="flex items-center justify-between h-16 px-4">
+      <div className="flex items-center h-16 px-4 relative">
         <div
           className={cn(
-            "text-xl font-semibold text-white transition-opacity duration-200",
-            isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100 w-auto"
+            "text-xl font-semibold text-white transition-all duration-300 whitespace-nowrap",
+            isCollapsed 
+              ? "opacity-0 -translate-x-4" 
+              : "opacity-100 translate-x-0"
           )}
         >
           Full One
         </div>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
-          className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className={cn(
+            "p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors absolute",
+            isCollapsed ? "right-3" : "right-4"
+          )}
         >
           {isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
         </button>
@@ -91,19 +96,31 @@ export function Sidebar() {
                   isActive ? "text-white opacity-100" : "text-white opacity-60"
                 )}
               />
-              {!isCollapsed && (
-                <span className="ml-2 text-sm transition-all">{item.name}</span>
-              )}
+              <span 
+                className={cn(
+                  "ml-2 text-sm transition-all duration-300",
+                  isCollapsed 
+                    ? "opacity-0 -translate-x-4 absolute" 
+                    : "opacity-100 translate-x-0"
+                )}
+              >
+                {item.name}
+              </span>
             </Link>
           );
         })}
       </nav>
 
-      {/* Footer/Profile */}
-      <div className="p-4 mt-auto">
-        <div className="h-10 w-10 rounded-full bg-black flex items-center justify-center text-white text-sm font-bold">
-          N
-        </div>
+      {/* Feedback button */}
+      <div className="px-2 pb-4">
+        <button
+          className={cn(
+            "w-full bg-green-500 hover:bg-green-600 text-white rounded-md py-2 text-sm transition-all duration-200 text-center",
+            isCollapsed ? "justify-center" : "px-3"
+          )}
+        >
+          {!isCollapsed && "Feedback"}
+        </button>
       </div>
     </div>
   );

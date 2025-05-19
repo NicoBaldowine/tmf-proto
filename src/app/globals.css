@@ -73,10 +73,18 @@
 
 @layer base {
   * {
-    @apply border-border focus:ring focus:ring-opacity-50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Remove default focus styles */
+  *:focus {
+    @apply outline-none;
+  }
+  /* Add custom focus styles where needed */
+  *:focus-visible {
+    @apply ring-1 ring-white/20;
   }
 }
 
@@ -94,4 +102,14 @@
   padding-left: 8px !important;
   padding-right: 8px !important;
   line-height: 1.2 !important;
+  height: 28px !important;
+}
+
+.compact-table thead tr {
+  height: 28px !important;
+}
+
+.compact-table th {
+  font-weight: 500 !important;
+  white-space: nowrap !important;
 }
