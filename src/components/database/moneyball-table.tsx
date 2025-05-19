@@ -24,6 +24,7 @@ import { Comments } from "./comments";
 import { CustomTooltip } from "@/components/ui/custom-tooltip";
 import { MoneyballSearchBar } from "./moneyball-searchbar";
 import { Podcast } from "./podcast";
+import { TickerAvatar } from "@/components/ui/ticker-avatar";
 
 export function MoneyballTable() {
   const formatPercent = (num: number) => {
@@ -32,19 +33,20 @@ export function MoneyballTable() {
 
   return (
     <div className="space-y-1 p-0">
-      <div className="flex justify-between items-center pt-3 pb-3 pr-4 pl-4">
+      <div className="flex justify-between items-center py-1.5 px-2">
         <div className="text-sm text-gray-500 font-medium">
           Results: 3625 of 3625
         </div>
-        <div className="flex items-center gap-3">
-          <MoneyballSearchBar className="w-80" />
+        <div className="flex items-center gap-2">
+          <MoneyballSearchBar className="w-80 lg:w-[320px] xl:w-[400px]" />
           <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
             <PlusCircle className="h-4 w-4" />
-            Add Column
+            <span className="hidden lg:inline">Add Column</span>
+            <span className="lg:hidden">Add</span>
           </Button>
           
           <Select defaultValue="2025-q1">
-            <SelectTrigger className="w-[130px] h-8 text-sm font-medium border-gray-200 shadow-none" size="sm">
+            <SelectTrigger className="w-[130px] h-8 text-sm font-medium border-gray-200 shadow-none hidden md:flex" size="sm">
               <SelectValue placeholder="Select Quarter">2025 Q1</SelectValue>
             </SelectTrigger>
             <SelectContent>
@@ -55,9 +57,9 @@ export function MoneyballTable() {
             </SelectContent>
           </Select>
           
-          <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none mr-1">
+          <Button variant="outline" size="sm" className="flex items-center gap-1 shadow-none">
             <SlidersHorizontal className="h-4 w-4" />
-            Customize
+            <span className="hidden lg:inline">Customize</span>
           </Button>
         </div>
       </div>
@@ -65,9 +67,9 @@ export function MoneyballTable() {
       <div className="text-sm text-gray-500 overflow-x-auto">
         <Table className="compact-table min-w-[1600px] border-collapse [&_th]:py-2.5 [&_td]:py-2.5 [&_th]:px-4 [&_td]:px-4">
           <TableCaption></TableCaption>
-          <TableHeader className="bg-gray-50 sticky top-0 z-10">
-            <TableRow className="border-b border-t">
-              <TableHead className="w-10 cursor-help group relative">
+          <TableHeader className="bg-gray-50 sticky top-0 z-10 h-7">
+            <TableRow className="border-b border-t h-7">
+              <TableHead className="w-10 cursor-help group relative h-7">
                 <Pin className="h-3.5 w-3.5" />
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
@@ -278,14 +280,10 @@ export function MoneyballTable() {
                 </TableCell>
                 <TableCell className="min-w-[120px] font-medium text-gray-600 pl-5">
                   <div className="flex items-center gap-3.5">
-                    <img 
-                      src={stock.logoUrl} 
-                      alt={stock.symbol} 
-                      className="w-7 h-7 rounded-full object-cover border border-gray-200" 
-                      onError={(e) => {
-                        // Fallback si la imagen no carga
-                        (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${stock.symbol}&background=random&size=28&bold=true`;
-                      }}
+                    <TickerAvatar 
+                      symbol={stock.symbol}
+                      logoUrl={stock.logoUrl}
+                      size="s"
                     />
                     <span>{stock.symbol}</span>
                   </div>
