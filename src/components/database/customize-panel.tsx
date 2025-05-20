@@ -185,7 +185,7 @@ export function CustomizePanel({ isOpen, onClose, onDeviationsChange }: Customiz
             <div 
               key={item.id} 
               className={cn(
-                "py-1.5 pr-4",
+                "py-1.5 pr-4 pl-4",
                 index < items.length - 1 && "border-b border-gray-200"
               )}
             >
