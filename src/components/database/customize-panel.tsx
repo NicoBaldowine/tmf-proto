@@ -168,18 +168,19 @@ export function CustomizePanel({ isOpen, onClose, onDeviationsChange }: Customiz
         "w-[340px]",
         isOpen ? "translate-x-0" : "translate-x-full"
     )}>
-      <div className="pt-4 pb-4 pl-4 pr-0 h-full flex flex-col">
-        <div className="flex items-center justify-between pb-2 mr-4 border-b border-gray-200">
-          <div className="flex items-center">
-            <h2 className="text-lg font-semibold">Customize</h2>
-            <Button variant="outline" size="sm" className="h-7 px-2 text-xs ml-2" onClick={resetItems}>Reset</Button>
+      <div className="h-full flex flex-col">
+        <div className="sticky top-0 z-10 bg-white pt-4 pl-4 pr-0 pb-0 mr-4 border-b border-gray-200">
+          <div className="flex items-center justify-between pb-2">
+            <div className="flex items-center">
+              <h2 className="text-lg font-semibold">Customize</h2>
+              <Button variant="outline" size="sm" className="h-7 px-2 text-xs ml-2" onClick={resetItems}>Reset</Button>
+            </div>
+            <Button variant="ghost" size="icon" onClick={onClose} className="h-7 w-7">
+              <X className="h-4 w-4" />
+            </Button>
           </div>
-          <Button variant="ghost" size="icon" onClick={onClose} className="h-7 w-7">
-            <X className="h-4 w-4" />
-          </Button>
         </div>
-
-        <div className="flex-grow overflow-y-auto pr-4 mt-3 scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 scrollbar-track-transparent">
+        <div className="flex-grow overflow-y-auto pr-4 mt-0 scrollbar-thin scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 scrollbar-track-transparent">
           {items.map((item, index) => (
             <div 
               key={item.id} 
