@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import { cva, type VariantProps } from "class-variance-authority"
 import {
   Tooltip,
@@ -10,7 +11,7 @@ import {
 import { cn } from "@/lib/utils"
 
 const tooltipVariants = cva(
-  "z-50 text-balance max-w-[280px] bg-gray-900 text-white shadow-md border border-gray-800 px-1.5 py-1",
+  "z-50 text-balance max-w-[280px] bg-gray-900 text-white shadow-md rounded-md px-2 py-1.5 text-xs",
   {
     variants: {
       variant: {
@@ -34,6 +35,7 @@ export interface CustomTooltipProps extends VariantProps<typeof tooltipVariants>
   delayDuration?: number
   autoShow?: boolean
   showDelay?: number
+  side?: "top" | "right" | "bottom" | "left"
 }
 
 export function CustomTooltip({
@@ -47,13 +49,13 @@ export function CustomTooltip({
   delayDuration = 200,
   autoShow = false,
   showDelay = 500,
+  side,
   ...props
 }: CustomTooltipProps) {
   const [isDiscoveryOpen, setIsDiscoveryOpen] = React.useState(false)
   const [hasHovered, setHasHovered] = React.useState(false)
   
   React.useEffect(() => {
-    // Para variante discovery o cuando autoShow es true, mostrar tooltip después de un breve retraso
     if ((variant === "discovery" || autoShow) && !isDiscoveryOpen && !hasHovered) {
       const timer = setTimeout(() => {
         setIsDiscoveryOpen(true)
@@ -84,14 +86,16 @@ export function CustomTooltip({
       </TooltipTrigger>
       <TooltipContent 
         className={cn(
-          tooltipVariants({ variant }),
+          "z-50 overflow-hidden rounded-md px-3 py-1.5 text-xs shadow-md",
+          "bg-gray-900 text-white",
           className
         )}
-        sideOffset={sideOffset}
+        sideOffset={sideOffset + 2}
+        side={side}
         {...props}
       >
         {content}
-        <div className="absolute left-1/2 bottom-[-6px] w-3 h-3 bg-gray-900 rotate-45 -translate-x-1/2"></div>
+        <TooltipPrimitive.Arrow className="fill-gray-900" />
       </TooltipContent>
     </Tooltip>
   )
