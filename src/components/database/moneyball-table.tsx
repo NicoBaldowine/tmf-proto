@@ -267,10 +267,22 @@ export function MoneyballTable() {
                   <TableCell className="text-right bg-white">{stock.garp}</TableCell>
                   <TableCell className="text-right bg-white">{stock.ai}</TableCell>
                   <TableCell className="text-right bg-white">
-                    {typeof stock.price === 'number'
-                      ? (isNaN(stock.price) ? 'N/A' : `$${stock.price.toFixed(2)}`)
-                      : stock.price
-                    }
+                    {(() => {
+                      const priceValFromStock = stock.price;
+
+                      if (typeof priceValFromStock === 'number') {
+                        const numericPrice: number = priceValFromStock; 
+                        if (isNaN(numericPrice)) {
+                          return 'N/A';
+                        } else {
+                          return `$${numericPrice.toFixed(2)}`;
+                        }
+                      } else if (typeof priceValFromStock === 'string') {
+                        return priceValFromStock; 
+                      }
+                      
+                      return 'N/A'; 
+                    })()}
                   </TableCell>
                   <TableCell className="text-right bg-white">
                     {typeof stock.payScore === 'string' ? stock.payScore : `${stock.payScore}%`}
