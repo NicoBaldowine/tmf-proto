@@ -295,7 +295,7 @@ export function MoneyballTable() {
                     <Checkbox />
                   </TableCell>
                   <TableCell className="min-w-[120px] font-medium text-gray-600 sticky left-10 bg-white z-20 border-r border-gray-200">
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-0.5">
                       <TickerAvatar 
                         symbol={stock.symbol}
                         logoUrl={stock.logoUrl}
