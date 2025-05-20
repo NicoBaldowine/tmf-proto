@@ -82,7 +82,7 @@ export function MoneyballTable() {
           </div>
         </div>
 
-        <div className="flex-grow overflow-x-auto overflow-y-auto">
+        <div className="flex-grow overflow-x-auto overflow-y-auto bg-white">
           <Table className="compact-table min-w-[1600px] border-collapse [&_th]:py-2.5 [&_td]:py-2.5 [&_th]:px-4 [&_td]:px-4 relative">
             <TableCaption></TableCaption>
             <TableHeader className="bg-gray-50 sticky top-0 z-10 h-7">
@@ -93,197 +93,115 @@ export function MoneyballTable() {
                 <TableHead className="min-w-[120px] group relative text-left sticky left-10 bg-gray-50 z-20 border-r border-gray-200 p-0">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Symbol</span>
                 </TableHead>
-                <TableHead className="w-[200px] cursor-help group relative">
+                <TableHead className="w-[200px] cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Name</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="w-[60px] text-center cursor-help group relative">
-                  <CustomTooltip
-                    variant="info"
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Curated episodes offering expert analysis per stock.</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="w-[60px] text-center cursor-help group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Curated episodes offering expert analysis per stock.</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Podcast</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="w-[90px] text-left group relative">
-                  <CustomTooltip 
-                    variant="discovery" 
-                    autoShow={true}
-                    showDelay={1000}
-                    content={
-                      <div className="text-xs p-1">
-                        Click on comment icons to see what <br />other investors are saying about these stocks.
-                      </div>
-                    }
-                  >
+                <TableHead className="w-[90px] text-left group relative bg-gray-50">
+                  <CustomTooltip variant="discovery" autoShow={true} showDelay={1000} content={<div className="text-xs p-1">Click on comment icons to see what <br />other investors are saying about these stocks.</div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Comments</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Combines financials, tech, product, leadership, and valuation into a single strength score.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Combines financials, tech, product, leadership, and valuation into a single strength score.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Superscore</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Measures how well a company uses physical assets to generate cash, excluding debt.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Measures how well a company uses physical assets to generate cash, excluding debt.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">ROUNTA</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Evaluates core tech, AI, and innovation strength within the industry.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Evaluates core tech, AI, and innovation strength within the industry.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Tech</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Analyzes product launches, partnerships, and sentiment over the past year.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
-                    <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Product:1Y</span>
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Analyzes product launches, partnerships, and sentiment over the past year.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
+                    <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Product: 1Y</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Evaluates long-term product strength based on quality, innovation, and competitiveness.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
-                    <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Product:5Y</span>
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Financial strength and stability metrics.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
+                    <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Financial</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Measures leadership through performance, returns, and decision-making.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Evaluates long-term product strength based on quality, innovation, and competitiveness.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
+                    <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Product: 5Y</span>
+                  </CustomTooltip>
+                  <div className="border-r h-full absolute right-0 top-0"></div>
+                </TableHead>
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Measures leadership through performance, returns, and decision-making.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Leaders</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Analyzes recent price trends to reflect market momentum.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Analyzes recent price trends to reflect market momentum.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Surge</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Assesses growth at a fair price—higher means better value.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Assesses growth at a fair price—higher means better value.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">GARP</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
-                  <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Price</span>
-                  <div className="border-r h-full absolute right-0 top-0"></div>
-                </TableHead>
-                <TableHead className="text-center group relative">
-                  <CustomTooltip 
-                    variant="info" 
-                    content={
-                      <div className="text-xs p-1">
-                        <p>Rates AI quality, impact, and infrastructure strength.</p>
-                        <p className="mt-1 text-gray-400">Updated on 03/31/2025</p>
-                      </div>
-                    }
-                  >
+                <TableHead className="text-center group relative bg-gray-50">
+                  <CustomTooltip variant="info" content={<div className="text-xs p-1"><p>Rates AI quality, impact, and infrastructure strength.</p><p className="mt-1 text-gray-400">Updated on 03/31/2025</p></div>}>
                     <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">AI</span>
                   </CustomTooltip>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
+                  <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Price</span>
+                  <div className="border-r h-full absolute right-0 top-0"></div>
+                </TableHead>
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">PayScore</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Industry</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Market Cap</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Quant: 5Y</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Investing Type</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Div. Yield</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center cursor-help group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">GAPTA</span>
                   <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableHead>
-                <TableHead className="text-center cursor-help group relative">
+                <TableHead className="text-center group relative bg-gray-50">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors cursor-pointer">Follow</span>
                 </TableHead>
               </TableRow>
@@ -294,20 +212,18 @@ export function MoneyballTable() {
                   <TableCell className="w-10 text-center sticky left-0 bg-white z-20 p-0">
                     <Checkbox />
                   </TableCell>
-                  <TableCell className="min-w-[120px] font-medium text-gray-600 sticky left-10 bg-white z-20 border-r border-gray-200 p-0">
+                  <TableCell className="min-w-[120px] font-medium sticky left-10 bg-white z-20 border-r border-gray-200 p-0">
                     <div className="flex items-center gap-2">
-                      <TickerAvatar 
-                        symbol={stock.symbol}
-                        logoUrl={stock.logoUrl}
-                        size="s"
-                      />
-                      <span>{stock.symbol}</span>
+                      <TickerAvatar symbol={stock.symbol} logoUrl={stock.logoUrl} size="s" />
+                      <span className="text-blue-700 cursor-pointer hover:text-blue-800 transition-colors">
+                        {stock.symbol}
+                      </span>
                     </div>
                   </TableCell>
-                  <TableCell className="w-[200px] text-left">
+                  <TableCell className="w-[200px] text-left bg-white">
                     {stock.name}
                   </TableCell>
-                  <TableCell className="w-[60px] text-center">
+                  <TableCell className="w-[60px] text-center bg-white">
                     <div className="flex justify-center">
                       {stock.id === "1" ? (
                         <Podcast listened />
@@ -318,55 +234,54 @@ export function MoneyballTable() {
                       )}
                     </div>
                   </TableCell>
-                  <TableCell className="w-[90px] text-left">
+                  <TableCell className="w-[90px] text-left bg-white">
                     <div className="flex justify-start">
                       <CustomTooltip 
                         variant="info" 
                         content={
                           <div className="text-xs p-1">
                             {(() => {
-                              if (stock.commentsCount === 0) {
-                                return "No comments yet! Be the first";
-                              } else if (stock.commentsHasReplies) {
-                                return `${stock.commentsCount} New replies where you participated in.`;
-                              } else if (stock.commentsHasNew) {
-                                return `${stock.commentsCount} new comments about ${stock.symbol}`;
-                              } else {
-                                return `${stock.commentsCount} comments about ${stock.symbol}`;
-                              }
+                              const S = stock;
+                              if (S.commentsCount === 0) return "No comments yet! Be the first";
+                              if (S.commentsHasReplies) return `${S.commentsCount} New replies where you participated in.`;
+                              if (S.commentsHasNew) return `${S.commentsCount} new comments about ${S.symbol}`;
+                              return `${S.commentsCount} comments about ${S.symbol}`;
                             })()}
                           </div>
                         }
                       >
                         <div>
-                          <Comments 
-                            count={stock.commentsCount} 
-                            hasNew={stock.commentsHasNew} 
-                            hasReplies={stock.commentsHasReplies} 
-                          />
+                          <Comments count={stock.commentsCount} hasNew={stock.commentsHasNew} hasReplies={stock.commentsHasReplies} />
                         </div>
                       </CustomTooltip>
                     </div>
                   </TableCell>
-                  <TableCell className="text-right">{stock.superscore}</TableCell>
-                  <TableCell className="text-right">{formatPercent(stock.ROUNTA)}</TableCell>
-                  <TableCell className="text-right">{stock.tech}</TableCell>
-                  <TableCell className="text-right">{stock.financial}</TableCell>
-                  <TableCell className="text-right">{stock.product1Y}</TableCell>
-                  <TableCell className="text-right">{stock.product5Y}</TableCell>
-                  <TableCell className="text-right">{stock.leaders}</TableCell>
-                  <TableCell className="text-right">{stock.surge}</TableCell>
-                  <TableCell className="text-right">{stock.garp}</TableCell>
-                  <TableCell className="text-right">{stock.price}</TableCell>
-                  <TableCell className="text-right">{stock.ai}</TableCell>
-                  <TableCell className="text-right">{stock.payScore}</TableCell>
-                  <TableCell className="text-left">{stock.industry}</TableCell>
-                  <TableCell className="text-right">{stock.marketCap}</TableCell>
-                  <TableCell className="text-right">{stock.quant5Y}</TableCell>
-                  <TableCell className="text-left">{stock.investingType}</TableCell>
-                  <TableCell className="text-right">{stock.divYield}</TableCell>
-                  <TableCell className="text-right">{stock.gapta}</TableCell>
-                  <TableCell className="text-center">
+                  <TableCell className="text-right bg-white">{stock.superscore}</TableCell>
+                  <TableCell className="text-right bg-white">{formatPercent(stock.ROUNTA)}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.tech}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.product1Y}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.financial}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.product5Y}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.leaders}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.surge}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.garp}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.ai}</TableCell>
+                  <TableCell className="text-right bg-white">
+                    {typeof stock.price === 'number'
+                      ? (isNaN(stock.price) ? 'N/A' : `$${stock.price.toFixed(2)}`)
+                      : stock.price
+                    }
+                  </TableCell>
+                  <TableCell className="text-right bg-white">
+                    {typeof stock.payScore === 'string' ? stock.payScore : `${stock.payScore}%`}
+                  </TableCell>
+                  <TableCell className="text-left bg-white">{stock.industry}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.marketCap}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.quant5Y}</TableCell>
+                  <TableCell className="text-left bg-white">{stock.investingType}</TableCell>
+                  <TableCell className="text-right bg-white">{stock.divYield}%</TableCell>
+                  <TableCell className="text-right bg-white">{stock.gapta}%</TableCell>
+                  <TableCell className="text-center bg-white">
                     <Button 
                       variant="ghost" 
                       size="icon" 

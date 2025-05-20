@@ -61,7 +61,7 @@ export function Sidebar() {
               : "opacity-100 translate-x-0"
           )}
         >
-          Full One
+          Fool One
         </div>
         <button
           onClick={() => setIsCollapsed(!isCollapsed)}
