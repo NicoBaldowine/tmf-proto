@@ -87,10 +87,10 @@ export function MoneyballTable() {
             <TableCaption></TableCaption>
             <TableHeader className="bg-gray-50 sticky top-0 z-10 h-7">
               <TableRow className="border-b h-7">
-                <TableHead className="w-10 cursor-help group relative h-7 sticky left-0 bg-gray-50 z-20">
+                <TableHead className="w-10 cursor-help group relative h-7 sticky left-0 bg-gray-50 z-20 p-0">
                   <Pin className="h-3.5 w-3.5" />
                 </TableHead>
-                <TableHead className="min-w-[120px] group relative text-left sticky left-10 bg-gray-50 z-20 border-r border-gray-200">
+                <TableHead className="min-w-[120px] group relative text-left sticky left-10 bg-gray-50 z-20 border-r border-gray-200 p-0">
                   <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Symbol</span>
                 </TableHead>
                 <TableHead className="w-[200px] cursor-help group relative">
@@ -291,11 +291,11 @@ export function MoneyballTable() {
             <TableBody>
               {moneyballStocksMock.map((stock) => (
                 <TableRow key={stock.id}>
-                  <TableCell className="w-10 text-center sticky left-0 bg-white z-20">
+                  <TableCell className="w-10 text-center sticky left-0 bg-white z-20 p-0">
                     <Checkbox />
                   </TableCell>
-                  <TableCell className="min-w-[120px] font-medium text-gray-600 sticky left-10 bg-white z-20 border-r border-gray-200">
-                    <div className="flex items-center gap-0.5">
+                  <TableCell className="min-w-[120px] font-medium text-gray-600 sticky left-10 bg-white z-20 border-r border-gray-200 p-0">
+                    <div className="flex items-center gap-2">
                       <TickerAvatar 
                         symbol={stock.symbol}
                         logoUrl={stock.logoUrl}

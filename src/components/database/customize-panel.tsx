@@ -175,7 +175,7 @@ export function CustomizePanel({ isOpen, onClose, onDeviationsChange }: Customiz
               <h2 className="text-lg font-semibold">Customize</h2>
               <Button variant="outline" size="sm" className="h-7 px-2 text-xs ml-2" onClick={resetItems}>Reset</Button>
             </div>
-            <Button variant="ghost" size="icon" onClick={onClose} className="h-7 w-7">
+            <Button variant="ghost" size="icon" onClick={onClose} className="h-7 w-7 mr-2">
               <X className="h-4 w-4" />
             </Button>
           </div>

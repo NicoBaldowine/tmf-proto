@@ -115,10 +115,11 @@ export function Sidebar() {
       <div className="px-2 pb-4">
         <button
           className={cn(
-            "w-full bg-green-500 hover:bg-green-600 text-white rounded-md py-2 text-sm transition-all duration-200 text-center",
+            "w-full bg-green-500 hover:bg-green-600 text-white rounded-md py-2 text-sm transition-all duration-200 text-center flex items-center justify-center gap-2",
             isCollapsed ? "justify-center" : "px-3"
           )}
         >
+          <MessageSquare className="w-5 h-5" />
           {!isCollapsed && "Feedback"}
         </button>
       </div>
