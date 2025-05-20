@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils"
 
 const tooltipVariants = cva(
-  "z-50 text-balance w-[280px] bg-gray-900 text-white shadow-md rounded-md px-2 py-1.5 text-xs",
+  "z-50 text-balance max-w-[280px] bg-gray-900 text-white shadow-md rounded-md px-2 py-1.5 text-xs",
   {
     variants: {
       variant: {

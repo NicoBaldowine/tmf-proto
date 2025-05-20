@@ -117,7 +117,7 @@ export function MoneyballTable() {
                     showDelay={1000}
                     content={
                       <div className="text-xs p-1">
-                        Click on comment icons to see what other investors are saying about these stocks.
+                        Click on comment icons to see what <br />other investors are saying about these stocks.
                       </div>
                     }
                   >
