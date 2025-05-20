@@ -65,15 +65,15 @@ export function MoneyballTable() {
       </div>
 
       <div className="text-sm text-gray-500 overflow-x-auto">
-        <Table className="compact-table min-w-[1600px] border-collapse [&_th]:py-2.5 [&_td]:py-2.5 [&_th]:px-4 [&_td]:px-4">
+        <Table className="compact-table min-w-[1600px] border-collapse [&_th]:py-2.5 [&_td]:py-2.5 [&_th]:px-4 [&_td]:px-4 relative">
           <TableCaption></TableCaption>
           <TableHeader className="bg-gray-50 sticky top-0 z-10 h-7">
             <TableRow className="border-b border-t h-7">
-              <TableHead className="w-10 cursor-help group relative h-7">
+              <TableHead className="w-10 cursor-help group relative h-7 sticky left-0 bg-gray-50 z-20">
                 <Pin className="h-3.5 w-3.5" />
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
-              <TableHead className="min-w-[120px] group relative text-left pl-5">
+              <TableHead className="min-w-[120px] group relative text-left pl-5 sticky left-10 bg-gray-50 z-20">
                 <span className="group-hover:bg-gray-200 p-1 rounded transition-colors">Symbol</span>
                 <div className="border-r h-full absolute right-0 top-0"></div>
               </TableHead>
@@ -275,10 +275,10 @@ export function MoneyballTable() {
           <TableBody>
             {moneyballStocksMock.map((stock) => (
               <TableRow key={stock.id}>
-                <TableCell className="w-10 text-center">
+                <TableCell className="w-10 text-center sticky left-0 bg-white z-20">
                   <Checkbox />
                 </TableCell>
-                <TableCell className="min-w-[120px] font-medium text-gray-600 pl-5">
+                <TableCell className="min-w-[120px] font-medium text-gray-600 pl-5 sticky left-10 bg-white z-20">
                   <div className="flex items-center gap-3.5">
                     <TickerAvatar 
                       symbol={stock.symbol}
@@ -287,6 +287,7 @@ export function MoneyballTable() {
                     />
                     <span>{stock.symbol}</span>
                   </div>
+                  <div className="border-r h-full absolute right-0 top-0"></div>
                 </TableCell>
                 <TableCell className="w-[200px] text-left">
                   {stock.name}
