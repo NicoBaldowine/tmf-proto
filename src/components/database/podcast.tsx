@@ -1,6 +1,6 @@
 "use client";
 
-import { Play } from "lucide-react";
+import { CirclePlay } from "lucide-react";
 import React from "react";
 
 interface PodcastProps {
@@ -10,11 +10,11 @@ interface PodcastProps {
 
 export function Podcast({ listened = false, isNew = false }: PodcastProps) {
   // Determine icon color based on props
-  const iconColor = listened ? "text-gray-400" : isNew ? "text-blue-500" : "text-gray-500";
+  const iconColor = "text-gray-400";
 
   return (
     <div className="flex items-center group cursor-pointer transition-opacity hover:opacity-80 relative">
-      <Play className={`h-4 w-4 ${iconColor} group-hover:scale-110 transition-transform`} />
+      <CirclePlay className={`w-5 h-5 ${iconColor}`} strokeWidth={1.3} />
     </div>
   );
 } 

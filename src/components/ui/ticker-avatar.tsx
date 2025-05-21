@@ -10,7 +10,7 @@ interface TickerAvatarProps {
 }
 
 const sizeClasses = {
-  s: "w-6 h-6 text-xs",   // 24x24
+  s: "w-5 h-5 text-xs",   // 20x20
   m: "w-8 h-8 text-sm",   // 32x32
   l: "w-12 h-12 text-base" // 48x48
 };

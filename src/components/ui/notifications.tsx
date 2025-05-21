@@ -12,8 +12,12 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { mockNotifications, NotificationItem } from "@/components/layout/mocks/notifications";
 import { cn } from '@/lib/utils';
+import { useEffect, useState } from 'react';
 
 export function Notifications() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const notificationCount = mockNotifications.filter(n => !n.read).length;
 
   const getIconForType = (type: NotificationItem['type']) => {
@@ -34,9 +38,8 @@ export function Notifications() {
           aria-label={`View notifications (${notificationCount} unread)`}
         >
           <Bell className="h-5 w-5 text-gray-600" />
-          {notificationCount > 0 && (
+          {mounted && notificationCount > 0 && (
             <span className="absolute top-1 right-0 block h-5 w-5 transform -translate-y-1/2 translate-x-1/2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
               <span className="relative inline-flex rounded-full h-full w-full bg-red-600 text-white text-xs items-center justify-center">
                 {notificationCount > 9 ? '9+' : notificationCount}
               </span>

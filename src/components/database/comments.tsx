@@ -11,12 +11,12 @@ interface CommentsProps {
 
 export function Comments({ count, hasNew = false, hasReplies = false }: CommentsProps) {
   // Determinar el color del icono
-  const iconColor = (hasNew || hasReplies) ? "text-blue-500" : "text-gray-400";
+  const iconColor = (hasNew || hasReplies) ? "text-gray-400" : "text-gray-400";
   
   // Determinar el color del badge
   let badgeColor = "bg-gray-100 text-gray-700";
   if (hasReplies) {
-    badgeColor = "bg-red-500 text-white";
+    badgeColor = "bg-red-100 text-red-700"; // Rojo muy claro con texto rojo oscuro
   } else if (hasNew) {
     badgeColor = "bg-blue-50 text-blue-800"; // Azul claro con texto azul oscuro
   }
@@ -28,7 +28,7 @@ export function Comments({ count, hasNew = false, hasReplies = false }: Comments
         
         {/* Indicador de respuesta (punto rojo) */}
         {hasReplies && (
-          <span className="absolute -top-1 -right-1 h-2 w-2 bg-red-500 rounded-full" />
+          <span className="absolute -top-1 -right-1 h-1.5 w-1.5 bg-red-500 rounded-full" />
         )}
       </div>
       
