@@ -95,7 +95,7 @@ export function MoneyballTable() {
                 </TableHead>
                 <TableHead
                   className="sticky left-[30px] z-20 bg-gray-100 border-r border-gray-200"
-                  style={{ minWidth: "160px", width: "160px" }}
+                  style={{ minWidth: "110px", width: "110px" }}
                 >
                   Symbol
                 </TableHead>
@@ -225,7 +225,7 @@ export function MoneyballTable() {
                   </TableCell>
                   <TableCell
                     className="sticky left-[30px] z-20 bg-inherit border-r border-gray-200"
-                    style={{ minWidth: "160px", width: "160px" }}
+                    style={{ minWidth: "110px", width: "110px" }}
                   >
                     <div className="flex items-center gap-2">
                       <TickerAvatar symbol={stock.symbol} logoUrl={stock.logoUrl} size="s" />
