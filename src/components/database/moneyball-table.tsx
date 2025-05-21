@@ -242,13 +242,7 @@ export function MoneyballTable() {
                   </TableCell>
                   <TableCell className="w-[60px] text-center">
                     <div className="flex justify-center">
-                      {stock.id === "1" ? (
-                        <Podcast listened />
-                      ) : stock.id === "2" ? (
-                        <Podcast isNew />
-                      ) : (
-                        <Podcast />
-                      )}
+                      <Podcast />
                     </div>
                   </TableCell>
                   <TableCell className="w-[90px] text-left">
