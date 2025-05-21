@@ -3,12 +3,7 @@
 import { CirclePlay } from "lucide-react";
 import React from "react";
 
-interface PodcastProps {
-  listened?: boolean;
-  isNew?: boolean;
-}
-
-export function Podcast({ listened = false, isNew = false }: PodcastProps) {
+export function Podcast() {
   // Determine icon color based on props
   const iconColor = "text-gray-400";
 

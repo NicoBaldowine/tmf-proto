@@ -30,11 +30,13 @@ export function TickerAvatar({ symbol, logoUrl, size = "m", className }: TickerA
       )}
     >
       {logoUrl ? (
+        // TODO: Consider replacing <img> with Next.js <Image> for better performance if using Next.js, or add loading="lazy" for optimization.
         <img
           src={logoUrl}
           alt={`${symbol} logo`}
           className="w-full h-full object-cover"
           onError={handleImageError}
+          loading="lazy"
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-600 font-semibold">

@@ -3,7 +3,7 @@ import { TickerAvatar } from "@/components/ui/ticker-avatar";
 import React from "react";
 
 interface MoneyballSymbolCellProps {
-  stock: any;
+  stock: { symbol: string; logoUrl?: string };
   zebra: "bg-white" | "bg-gray-50";
 }
 
